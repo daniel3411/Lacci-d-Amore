@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Confeitaria Delícia</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to right, #ffe0e9, #fff0f5);
+      color: #333;
+    }
+    header {
+      background-color: #ff69b4;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      animation: fadeInDown 1s ease;
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .produtos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 250px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      overflow: hidden;
+      animation: fadeInUp 1s ease;
+    }
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .card h3 {
+      margin: 10px;
+      font-size: 1.2em;
+    }
+    .card p {
+      margin: 0 10px 10px;
+    }
+    .botao {
+      display: block;
+      background: #ff69b4;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      text-decoration: none;
+      margin: 10px;
+      border-radius: 10px;
+      transition: background 0.3s;
+    }
+    .botao:hover {
+      background: #ff85c1;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #ffc0cb;
+    }
+    .botao-whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s;
+  z-index: 1000;
+}
+
+.botao-whatsapp:hover {
+  background-color: #1ebe5d;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Lacci D' Amore Confeitaria</h1>
+    <p>Os melhores bolos feitos com amor!</p>
+  </header>
+
+  <section class="produtos">
+    <div class="card">
+      <img src="data:image/jpeg;base64,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" alt="Bolo artesanal">
+      
+      <p>Delicioso bolo com cobertura cremosa.</p>
+      <a href="https://m.facebook.com/laccidamoreconfeitaria/photos/direto-da-galeria-pro-feed-o-bolo-mais-gostoso-e-molhadinho-da-cidade-te-lembran/1113009680830109/">Galeria no facebook</a>
+
+    </div>
+
+    </div>
+    <div class="card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxeSlD6PdrP1uywnmzFgfWqsw2y71eYgJSb2OGWqMZ4aC-PKIpDqIVH1s&s" alt="">
+      
+    <a href="https://www.instagram.com/reel/DJHeMh2xkmE/">fotos no instagran</a>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Confeitaria Delícia. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    // Efeito animado com JS para destacar os cartões
+    document.querySelectorAll('.card').forEach(card => {
+      card.addEventListener('mouseenter', () => {
+        card.style.border = '2px solid #ff69b4';
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.border = 'none';
+      });
+    });
+  </script>
+<a href="https://wa.me/5551994458998?text=Olá%20gostaria%20de%20fazer%20um%20pedido%20de%20bolo!" 
+   class="botao-whatsapp" target="_blank">
+  Fale Conosco no WhatsApp
+</a>
+<a href="https://linktr.ee/laccidamoreconfeitaria" target="_blank">Clique aqui para visitar o site</a>
+
+</body>
+</html>
